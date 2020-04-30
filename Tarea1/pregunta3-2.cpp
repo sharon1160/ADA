@@ -21,11 +21,11 @@ void bubbleSort(int arr[], int n)
 	int i, j; 
   objeto+=2;//por la creacion de los enteros i y j
   asig++;//por el valor cero que toma i en el for
-	for (i = 0; i < n-1; i++,asig++){	 
+	for (i = 0; i < n-1; i++,asig++){//el asig++ por el i++	 
          // Last i elements are already in place
         compa++;//comparacion del for
         asig++;//por el valor cero que toma j en el for
-        for (j = 0; j < n-i-1; j++,asig++){ 
+        for (j = 0; j < n-i-1; j++,asig++){//el asig++ por el i++
             compa+=2;//comparacion del for y del if
             if (arr[j] > arr[j+1]) 
                 swap(&arr[j], &arr[j+1]);
