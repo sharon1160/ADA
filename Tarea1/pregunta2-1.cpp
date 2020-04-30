@@ -46,7 +46,7 @@ int main()
 
 	  printArray(arr, n); 
 
-    cout<<"El tiempo fue de "<<float(t)/CLOCKS_PER_SEC<<"segundos"<<endl;
+    cout<<"El tiempo fue de "<<float(t)*1000/CLOCKS_PER_SEC<<"ms"<<endl;
 	  return 0; 
 } 
 
