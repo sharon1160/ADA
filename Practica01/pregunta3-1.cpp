@@ -59,7 +59,7 @@ void insertionSort(int arr[], int n)
 	cout<<"Numero de asignaciones de memoria: "<<memoria<<endl;
 	
 	int total=asig+compa+objeto+memoria;
-	cout<<"Total:"<<total;
+	cout<<"Total:"<<total<<endl;
 } 
 
 // A utility function to print an array of size n 
