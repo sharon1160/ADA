@@ -1,4 +1,10 @@
 //INSERT SORT
+
+/*[2] Copiar codigos en el lenguaje de su preferencia:
+1. Copiar el código de insert sort Wikipedia
+2. Copiar el código de buble sort Wikipedia.
+Medir el tiempo.*/
+
 #include<ctime>
 #include <bits/stdc++.h> 
 using namespace std; 
