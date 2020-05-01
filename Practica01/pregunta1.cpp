@@ -1,5 +1,9 @@
 //GENERADOR
 
+/*
+1] Crear un generador de arreglos
+10 / 1mil / 100 mil / 1 millón*/
+
 #include <iostream>
 
 using namespace std;
