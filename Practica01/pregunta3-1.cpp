@@ -1,5 +1,16 @@
 //INSERT SORT
 
+/*
+3] Utilizando los algoritmos de ordenación:
+1. Realizar un análisis de la cantidad de comparaciones
+2. Realizar un análisis de la cantidad de asignaciones
+3. Realizar un análisis de la cantidad de asignación de memoria
+6. Imprimir su valor:
+x2 comparaciones
+x8 asignaciones
+x200 creación de un objeto
+x50 + n x 10 separa memoria para un arreglo o lista de tamanho 'n'  */
+
 #include <bits/stdc++.h> 
 using namespace std; 
 
