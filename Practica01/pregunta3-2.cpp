@@ -27,7 +27,7 @@ void bubbleSort(int arr[], int n)
 	int asig=0;//# de asignaciones
 	int compa=0;//# de comparaciones
 	int objeto=0;//# de creaciones de objetos
-	int memoria=0;//# de veces que separa memoria para un arreglo o lista de tamanho 'n' 
+	int memoria=1;//el arreglo guardado en la memoria
 
 	int i, j; 
 	objeto+=2;//por la creacion de los enteros i y j
@@ -51,12 +51,15 @@ void bubbleSort(int arr[], int n)
 	asig=asig*8;
 	compa=compa*2;
 	objeto=objeto*200;
-	//memoria=memoria*50 + n* 10
+	memoria=memoria*50 + n* 10
 
 	cout<<"Numero de asignaciones: "<<asig<<endl;
 	cout<<"Numero de comparaciones: "<<compa<<endl;
 	cout<<"Numero de creaciones de objeto: "<<objeto<<endl;
 	cout<<"Numero de asignaciones de memoria: "<<memoria<<endl;
+	
+	int total=asig+compa+objeto+memoria;
+	cout<<"Total: "<<total<<endl;
 } 
 
 /* Function to print an array */
