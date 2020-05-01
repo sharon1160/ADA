@@ -51,7 +51,7 @@ void bubbleSort(int arr[], int n)
 	asig=asig*8;
 	compa=compa*2;
 	objeto=objeto*200;
-	memoria=memoria*50 + n* 10
+	memoria=memoria*50 + n* 10;
 
 	cout<<"Numero de asignaciones: "<<asig<<endl;
 	cout<<"Numero de comparaciones: "<<compa<<endl;
