@@ -22,7 +22,7 @@ def insertion_sort1(A):
     asignaciones += 1  # por la asignacion "A[i + 1]"
   comparaciones  += len(A) - 1  # comparaciones de "j" en el for
   asignaciones += 1  # por el fin del ciclo for
-  memoria += 1  # por el range
+  memoria += 2  # por el range y el arreglo
   unidades_tiempo = 2 * comparaciones + 8 * asignaciones + 200 * memoria  + (50 + len(A) * 10)
   return unidades_tiempo
 
@@ -45,7 +45,7 @@ def bubble_sort1(A):
     if not swapped:
       break
     comparaciones  += 1  # por el if not swapped
-  memoria  += 1  # por el range
+  memoria  += 2  # por el range y el arreglo
   unidades_tiempo = 2 * comparaciones  + 8 * asignaciones + 200 * memoria  + (50 + len(A) * 10)
   return unidades_tiempo
 
