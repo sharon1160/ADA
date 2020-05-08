@@ -104,11 +104,7 @@ def generador(elec,tamanio):
         array=aleatorio(tamanio)
         return array
 
-def mostrar(arr):
-    for i in range (len(arr)):
-        print(arr[i])
-
-
+#MAIN
 #tamanios=[10,20,30]
 tamanios = [500, 1000, 2000, 5000, 10000, 20000]
 print("*Creciente")
