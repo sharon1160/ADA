@@ -22,7 +22,7 @@ def insertion_sort1(A):
     asignaciones += 1  # por la asignacion "A[i + 1]"
   comparaciones  += len(A) - 1  # comparaciones de "j" en el for
   asignaciones += 1  # por el fin del ciclo for
-  memoria += 2  # por el range y el arreglo
+  memoria += 1  # por el range
   unidades_tiempo = 2 * comparaciones + 8 * asignaciones + 200 * memoria  + (50 + len(A) * 10)
   return unidades_tiempo
 
@@ -45,7 +45,7 @@ def bubble_sort1(A):
     if not swapped:
       break
     comparaciones  += 1  # por el if not swapped
-  memoria  += 2  # por el range y el arreglo
+  memoria  += 1  # por el range
   unidades_tiempo = 2 * comparaciones  + 8 * asignaciones + 200 * memoria  + (50 + len(A) * 10)
   return unidades_tiempo
 
@@ -79,9 +79,6 @@ def bubble_sort2(A):
 
 ###############################################################
 
-def mostrar(arr):
-    for i in range (len(arr)):
-        print(arr[i]) 
         
 def creciente(tamanio):
     return [x for x in range(1, tamanio+1)]
@@ -104,14 +101,14 @@ def generador(elec,tamanio):
         array=aleatorio(tamanio)
         return array
 
-#MAIN
+
+# MAIN
 #tamanios=[10,20,30]
 tamanios = [500, 1000, 2000, 5000, 10000, 20000]
 print("*Creciente")
 print("*Decreciente")
 print("*Aleatorio")
 elec=str(input("Escribe tu opcion :"))
-
 #### Bubble Sort #######
 tiemposUnidad =[]
 tiemposReal = []
