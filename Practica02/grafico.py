@@ -78,7 +78,9 @@ def bubble_sort2(A):
   return real_time
 
 ###############################################################
-
+def mostrar(A):
+    for i in range (len(A)):
+        print(A[i])
         
 def creciente(tamanio):
     return [x for x in range(1, tamanio+1)]
