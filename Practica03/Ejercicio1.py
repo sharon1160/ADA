@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import random
 import time
 
-### LOS DOS ALGORITMOS QUE RETORNAN EL TIEMPO REAL ###
+### INSERTION SORT ###
 
 def insertion_sort(A):
   for j in range(1, len(A)):
@@ -14,6 +14,8 @@ def insertion_sort(A):
       A[i+1] = A[i]
       i = i - 1
     A[i + 1] = key
+    
+### MERGE SORT (TOP-DOWN) ###
 
 def merge_sort(array, left_index, right_index):
     if left_index >= right_index:
