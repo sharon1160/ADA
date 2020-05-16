@@ -121,8 +121,6 @@ def generador(elec,tamanio):
 ###### MAIN ######
 
 tamanios = [400,500,800,1000,1500,2000,2500,3000,4000,8000,9000]
-#tamanios = [25, 50, 75, 100, 125, 150, 175,200]
-#tamanios = [40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150]
 print("*Creciente")
 print("*Decreciente")
 print("*Aleatorio")
