@@ -1,4 +1,4 @@
-#Autor : Chullunquía Rosas, Sharon Rossely
+#Nombre : Chullunquía Rosas, Sharon Rossely
 
 import matplotlib.pyplot as plt
 import random
