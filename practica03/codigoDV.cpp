@@ -7,8 +7,8 @@ int Seg_Max_DV(int arr[],int n){
 	int izquierdaMax = Seg_Max_DV(arr,q);
 	int derechaMax = Seg_Max_DV(arr+q,n-q);
 	int suma_izquierda=INT_MIN;
-    int suma_derecha=INT_MIN;
-    int suma=0;
+	int suma_derecha=INT_MIN;
+	int suma=0;
 	for(int i= q;i<n;i++){
 		suma += arr[i];
 		suma_derecha=max(suma_derecha,suma);
