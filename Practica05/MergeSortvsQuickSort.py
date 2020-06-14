@@ -81,11 +81,10 @@ def Merge_Sort(A,p,r):
         Merge_Sort(A,q,r)
         Intercala(A,p,q,r)
 
-###############################################################
+########## GENERADOR DE ARREGLOS ALEATORIOS ##########
 
 def aleatorio(tamanio):
     return [random.randint(0, tamanio) for x in range(tamanio)]
-
 
 
 ########## MAIN ##########
