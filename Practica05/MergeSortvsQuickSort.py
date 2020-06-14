@@ -134,6 +134,3 @@ ax2.set_title("Comparación de Quick Sort y Merge Sort (Intercala) con arreglos 
 ax2.legend()
 ax2.grid()
 fig2.savefig("Aleatorio_tiempo_real.png")
-
-
-
