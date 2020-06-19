@@ -62,11 +62,11 @@ print(logaritmo)
 
 
 # GRAFICA
-#######Comparacion de tiempos reales######
+####### COMPARACION DE PROMEDIO y 1 + ln(n) #######
 
 fig2, ax2 = plt.subplots()
-ax2.plot(tamanios, logaritmo, label='Maximo con logaritmo')
-ax2.plot(tamanios, contador, label='Maximo con contador')
+ax2.plot(tamanios, logaritmo, label='Maximo con logaritmo') # 1 + ln(n)
+ax2.plot(tamanios, contador, label='Maximo con contador')  # promedio
 ax2.set_xlabel('Tamaños de los arreglos')  # Add an x-label to the axes.
 ax2.set_ylabel('Tiempo promedio')  # Add a y-label to the axes.
 ax2.set_title("Promedio de veces que la línea 4 es ejecutada en Maximo")
