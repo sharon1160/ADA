@@ -42,7 +42,7 @@ logaritmo = []
 for i in range (len(tamanios)):
     results = []
     logaritmo.append(math.log(tamanios[i])+1)
-    for j in range (200):
+    for j in range (201):
         A= aleatorio(tamanios[i])
         results.append(maximo(A))
     contador.append(promedio(results))
