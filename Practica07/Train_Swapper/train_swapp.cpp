@@ -1,4 +1,4 @@
-\\Nombre : Sharon Chullunquía Rosas
+//Nombre : Sharon Chullunquía Rosas
 
 #include <iostream>
 #include <vector>
