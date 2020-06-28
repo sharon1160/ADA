@@ -1,0 +1,3 @@
+La mejor cantidad de swaps de trenes es 1 swaps
+La mejor cantidad de swaps de trenes es 2 swaps
+La mejor cantidad de swaps de trenes es 1 swaps
