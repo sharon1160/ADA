@@ -1,3 +1,5 @@
+\\Nombre : Sharon Chullunquía Rosas
+
 #include <iostream>
 #include <cstdlib>
 #include <cmath>
