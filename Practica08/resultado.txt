@@ -1,0 +1,1 @@
+Valores fuera del rango establecido 0<=|n|<1000
