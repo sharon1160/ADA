@@ -85,6 +85,7 @@ int main (){
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
                 cin>>A[i][j];
+                //Los valores dentro de la matriz están entre 0<=|n|<1000
                 if(A[i][j] >= 1000){
                     flag = false;
                     break;
@@ -98,6 +99,9 @@ int main (){
             int resultado;
             resultado = suma_maxima(A,n);
             cout<<resultado<<endl;
+        }
+        else{
+            cout<<"Valores fuera del rango establecido 0<=|n|<1000"<<endl;
         }
 
         for(int i = 0; i < n; i++){
