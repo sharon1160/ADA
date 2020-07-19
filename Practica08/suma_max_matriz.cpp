@@ -4,16 +4,6 @@
 
 using namespace std;
 
-
-void mostrar(int **A,int n){
-    for(int i=0;i<n;i++){
-        for(int j=0;j<n;j++)
-            cout<<A[i][j]<<' ';
-        cout<<endl;
-    }
-    cout<<endl;
-}
-
 int sumAcum(int **A,int i,int j){
     if (i==0 && i==j){
         return A[i][j];
@@ -33,29 +23,29 @@ int sumAcum(int **A,int i,int j){
 
 Donde : 
 
-fi : fila inferior
-fs : fila superior
-ci : columna inferior
-cs : columna superior
+fInf : fila inferior
+cInf : columna inferior
+fSup : fila superior
+cSup : columna superior
 
 */
 
-int sumaMatriz(int **A,int fi,int ci,int fs ,int  cs){
+int sumaMatriz(int **A,int fInf,int cInf,int fSup ,int  cSup){
     int resultado;
-    if(fi==0 && fi==ci){
-        resultado = sumAcum(A,fs,cs);
+    if(fInf==0 && fInf==cInf){
+        resultado = sumAcum(A,fSup,cSup);
         return resultado;
     }
-    if (ci==0 && fi!=0){
-        resultado = sumAcum(A,fs,cs) - sumAcum(A,fi-1,cs);
+    if (cInf == 0 && fInf != 0){
+        resultado = sumAcum(A,fSup,cSup) - sumAcum(A,fInf-1,cSup);
         return resultado;
     }
-    if (ci!=0 && fi==0){
-        resultado = sumAcum(A,fs,cs) - sumAcum(A,fs,ci-1);
+    if (cInf != 0 && fInf ==0){
+        resultado = sumAcum(A,fSup,cSup) - sumAcum(A,fSup,cInf-1);
         return resultado;
     }
-    if (ci !=0 & fi != 0){
-        resultado = sumAcum(A,fs,cs) - sumAcum(A,fi-1,cs) - sumAcum(A,fs,ci-1) + sumAcum(A,fi-1,ci-1);
+    if (cInf != 0 & fInf != 0){
+        resultado = sumAcum(A,fSup,cSup) - sumAcum(A,fInf-1,cSup) - sumAcum(A,fSup,cInf-1) + sumAcum(A,fInf-1,cInf-1);
         return resultado;
     }
 }
