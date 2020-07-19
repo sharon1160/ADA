@@ -1,3 +1,5 @@
+//Nombre : Sharon Chullunquía Rosas
+
 #include <iostream>
 
 using namespace std;
@@ -28,6 +30,7 @@ int sumAcum(int **A,int i,int j){
 }
 
 /*
+
 Donde : 
 
 fi : fila inferior
@@ -57,7 +60,6 @@ int sumaMatriz(int **A,int fi,int ci,int fs ,int  cs){
     }
 }
 
-
 int suma_maxima(int **A,int n){
     int resultado;
     int sumMax = 0;
@@ -74,7 +76,6 @@ int suma_maxima(int **A,int n){
     }
     return sumMax;
 }
-
 
 
 int main (){
