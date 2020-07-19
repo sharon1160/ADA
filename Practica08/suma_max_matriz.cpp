@@ -111,3 +111,10 @@ int main (){
     }
     return 0;
 }
+
+/*
+Para compilar :
+
+g++ suma_max_matriz.cpp -o suma_max_matriz.out
+./suma_max_matriz.out < prueba.txt > resultado.txt
+*/
