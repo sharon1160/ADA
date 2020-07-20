@@ -7,27 +7,6 @@
 
 using namespace std;
 
-int sumAcum(int **A,int i,int j){
-    //Caso base
-    if (i==0 && i==j){
-        return A[i][j];
-    }
-    //Primer caso
-    if (i==0 && j!=0){
-        return(sumAcum(A,i,j-1)+A[i][j]);
-    }
-    //Segundo caso
-    if (i!=0 && j==0){
-        return(sumAcum(A,i-1,j)+A[i][j]);
-    }
-    //Tercer caso
-    if (i!=0 && j !=0){
-        //A[i,j] = sumatoria de los elementos hasta el indice i,j
-        //        = Orig[i,j] + A[i,j-1] + A[i-1,j] - A[i-1,j-1]
-        return (A[i][j] + sumAcum(A,i,j-1)+ sumAcum(A,i-1,j)-sumAcum(A,i-1,j-1));
-    }
-}
-
 /*
 
 Donde : 
@@ -46,13 +25,13 @@ int suma_maxima(int **A,int n){
         for(int cInf = 0; cInf < n; cInf++){
             for(int fSup = fInf; fSup < n; fSup++){
                 for(int cSup = cInf; cSup < n; cSup++){
-                    Subsuma_resultado = sumAcum(A,fSup,cSup);
+                    Subsuma_resultado = A[fSup][cSup];// O(1)
                     if(fInf > 0)
-                        Subsuma_resultado -= sumAcum(A,fInf-1,cSup);
+                        Subsuma_resultado -= A[fInf-1][cSup];
                     if(cInf > 0)
-                        Subsuma_resultado -= sumAcum(A,fSup,cInf-1);
+                        Subsuma_resultado -= A[fSup][cInf-1];
                     if(fInf > 0 && cInf > 0)
-                        Subsuma_resultado += sumAcum(A,fInf-1,cInf-1);
+                        Subsuma_resultado += A[fInf-1][cInf-1];
                     sumMax = max(sumMax, Subsuma_resultado);
                 }
             }
@@ -88,12 +67,22 @@ int main (){
 
         if(flag == true){
             int resultado;
+            //Hallando matriz acumulativa  sobre la matriz original
+            for (int i = 0; i < n; ++i) {
+                for (int j = 0; j < n; ++j) {
+                    if (i > 0) 
+                        A[i][j] += A[i - 1][j];
+                    if (j > 0) 
+                        A[i][j] += A[i][j - 1];
+                    if (i > 0 && j > 0)
+                        A[i][j] -= A[i - 1][j - 1];
+                }
+            }
             resultado = suma_maxima(A,n);
             cout<<resultado<<endl;
         }
-        else{
+        else
             cout<<"Valores fuera del rango establecido 0<=|n|<1000"<<endl;
-        }
 
         for(int i = 0; i < n; i++){
             delete[] A[i]; 
@@ -107,5 +96,5 @@ int main (){
 Para compilar :
 
 g++ suma_max_matriz_pd.cpp -o suma_max_matriz_pd.out
-./suma_max_matriz_pd.out < prueba.txt > resultado.txt
+./suma_max_matriz_pd.out < prueba1.txt > resultado1.txt
 */
