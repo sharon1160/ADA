@@ -5,15 +5,19 @@
 using namespace std;
 
 int sumAcum(int **A,int i,int j){
+    //Caso base
     if (i==0 && i==j){
         return A[i][j];
     }
+    //Primer caso
     if (i==0 && j!=0){
         return(sumAcum(A,i,j-1)+A[i][j]);
     }
+    //Segundo caso
     if (i!=0 && j==0){
         return(sumAcum(A,i-1,j)+A[i][j]);
     }
+    //Tercer caso
     if (i!=0 && j !=0){
         //A[i,j] = sumatoria de los elementos hasta el indice i,j
         //        = Orig[i,j] + A[i,j-1] + A[i-1,j] - A[i-1,j-1]
@@ -34,18 +38,22 @@ cSup : columna superior
 
 int sumaMatriz(int **A,int fInf,int cInf,int fSup ,int  cSup){
     int resultado;
+    //Primer caso
     if(fInf==0 && fInf==cInf){
         resultado = sumAcum(A,fSup,cSup);
         return resultado;
     }
+    //Segundo Caso
     if (cInf == 0 && fInf != 0){
         resultado = sumAcum(A,fSup,cSup) - sumAcum(A,fInf-1,cSup);
         return resultado;
     }
+    //Tercer Caso
     if (cInf != 0 && fInf ==0){
         resultado = sumAcum(A,fSup,cSup) - sumAcum(A,fSup,cInf-1);
         return resultado;
     }
+    //Cuarto Caso
     if (cInf != 0 & fInf != 0){
         //resultado = z - p - q + r
         resultado = sumAcum(A,fSup,cSup) - sumAcum(A,fInf-1,cSup) - sumAcum(A,fSup,cInf-1) + sumAcum(A,fInf-1,cInf-1);
