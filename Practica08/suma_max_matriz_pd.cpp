@@ -67,7 +67,7 @@ int main (){
 
         if(flag == true){
             int resultado;
-            //Hallando matriz acumulativa  sobre la matriz original
+            //Hallando matriz de suma acumulativa  sobre la matriz original
             for (int i = 0; i < n; ++i) {
                 for (int j = 0; j < n; ++j) {
                     if (i > 0) 
