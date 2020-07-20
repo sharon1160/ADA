@@ -63,7 +63,7 @@ int sumaMatriz(int **A,int fInf,int cInf,int fSup ,int  cSup){
 
 int suma_maxima(int **A,int n){
     int resultado;
-    int sumMax = -999*(n**2); //el valor mas pequeño que puede tomar
+    int sumMax = -999*(n**2); //el valor mas pequenio que puede tomar
     for(int fInf = 0; fInf < n; fInf++){
         for(int cInf = 0; cInf < n; cInf++){
             for(int fSup = fInf; fSup < n; fSup++){
