@@ -1,5 +1,7 @@
 //Nombre : Sharon Chullunquía Rosas
 
+//Codigo hecho con Divide y Conquista
+
 #include <iostream>
 
 using namespace std;
@@ -94,7 +96,7 @@ int main (){
             for(int j=0;j<n;j++){
                 cin>>A[i][j];
                 //Los valores dentro de la matriz están entre 0<=|n|<1000
-                if(A[i][j] >= 1000){
+                if(A[i][j] >= 1000 || A[i][j] <= -1000){
                     flag = false;
                     break;
                 }
